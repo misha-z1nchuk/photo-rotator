@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manav Finance</title>
+
+</head>
+<body>
+<input type="button" id="openFile" value="Open File" />
+<input type="button" id="rotateLeft" value="Rotate left" />
+<input type="button" id="rotateRight" value="Rotate right" />
+<div id="x"></div>
+<script src="renderer.js"></script>
+<script>
+    window.api.receive('showPhoto', (data) => {
+        const imageExists = document.getElementById('photo')
+        if (imageExists){
+            imageExists.src = 'data:image/png;base64, ' + data.src;
+            return;
+        }
+        var img = document.createElement("img");
+        img.id = 'photo'
+        img.width = 600
+        img.height = 800
+        img.src = 'data:image/png;base64, ' + data.src;
+        var block = document.getElementById("x");
+        block.appendChild(img);
+
+    })
+    window.api.receive('updatePhoto', (data) => {
+        var image = document.getElementById("photo");
+        image.src = 'data:image/png;base64, ' + data.src;
+    })
+
+</script>
+</body>
+
+</html>
