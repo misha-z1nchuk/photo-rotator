@@ -5,7 +5,7 @@
   "main": "lib/main.js",
   "type": "commonjs",
   "scripts": {
-    "start": "NODE_ENV=production electron .",
+    "start": "NODE_ENV=development electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "electron-builder",
     "test:lint": "npx eslint lib/main.js lib/preload.js lib/renderer.js",
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.0",
+    "dotenv-expand": "^8.0.3",
     "imagemagick": "^0.1.3"
   }
 }
