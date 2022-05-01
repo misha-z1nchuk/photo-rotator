@@ -1,4 +1,4 @@
-const {contextBridge, ipcRenderer} = require('electron')
+const { contextBridge, ipcRenderer } = require('electron');
 
 
 contextBridge.exposeInMainWorld(
@@ -8,19 +8,19 @@ contextBridge.exposeInMainWorld(
         rotateLeft: () => ipcRenderer.send('rotateLeft'),
         rotateRight: () => ipcRenderer.send('rotateRight')
     }
-)
+);
 
 contextBridge.exposeInMainWorld(
-    "api", {
+    'api', {
         send: (channel, data) => {
             // whitelist channels
-            let validChannels = ["toMain"];
+            const validChannels = ['toMain'];
             if (validChannels.includes(channel)) {
                 ipcRenderer.send(channel, data);
             }
         },
         receive: (channel, func) => {
-            let validChannels = ["showPhoto", "updatePhoto"];
+            const validChannels = ['showPhoto', 'updatePhoto'];
             if (validChannels.includes(channel)) {
                 // Deliberately strip event as it includes `sender`
                 ipcRenderer.on(channel, (event, ...args) => func(...args));

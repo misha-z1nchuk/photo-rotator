@@ -6,11 +6,27 @@
   "type": "commonjs",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dist": "electron-builder",
+    "test:lint": "npx eslint main.js preload.js renderer.js",
+    "test:lint:fix": "npx eslint --fix main.js preload.js renderer.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^18.1.0"
+    "electron": "^18.1.0",
+    "electron-builder": "^23.0.3",
+    "eslint": "^8.14.0"
+  },
+  "build": {
+    "appId": "photo.rotator",
+    "productName": "photo rotator",
+    "target": "AppImage",
+    "directories": {
+      "buildResources": "temp"
+    }
+  },
+  "dependencies": {
+    "imagemagick": "^0.1.3"
   }
 }
