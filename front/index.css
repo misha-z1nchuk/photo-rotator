@@ -1,0 +1,16 @@
+body{
+    background-color: gray;
+    display: block;
+}
+
+#canvas-div{
+    text-align: center;
+}
+
+#canvas{
+    outline: black 3px solid;
+}
+
+#buttons{
+    text-align: center;
+}
