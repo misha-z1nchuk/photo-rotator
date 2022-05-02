@@ -27,6 +27,11 @@ body{
     font-size: 16px;
 }
 
+.button:hover {
+    cursor: pointer;
+    background-color: darkcyan;
+}
+
 
 #file-path{
     font-size: 27px;
