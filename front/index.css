@@ -8,9 +8,26 @@ body{
 }
 
 #canvas{
-    outline: black 3px solid;
+    outline: darkgray 3px solid;
 }
 
 #buttons{
+    margin-top: 2px;
     text-align: center;
+}
+
+.button {
+    background-color: cadetblue; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+#file-path{
+    font-size: 27px;
 }

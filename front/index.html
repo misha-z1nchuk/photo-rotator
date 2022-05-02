@@ -2,21 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Manav Finance</title>
+        <title>Photo Rotator</title>
         <link href="index.css" rel="stylesheet">
     </head>
     <body>
         <div id="canvas-div">
-            <canvas id="canvas" width="600" height="800"></canvas>
+            <canvas id="canvas" width="700" height="700"></canvas>
         </div>
         <div id="buttons">
-            <input type="button" id="openFile" value="Open File" />
-            <input type="button" id="rotateLeft" value="Rotate left" />
-            <input type="button" id="rotateRight" value="Rotate right" />
+            <input class="button" type="button" id="openFile" value="Open File" />
+            <input class="button" type="button" id="rotateLeft" value="Rotate left" />
+            <input class="button" type="button" id="rotateRight" value="Rotate right" />
             <div id="file-path"></div>
         </div>
 
-    <script src="../lib/renderer.js"></script>
+    <script src="../lib/renderer/renderer.js"></script>
     <script src="../lib/photoLogic/windowApi.js"></script>
 </body>
 </html>
