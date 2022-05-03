@@ -2,6 +2,10 @@
 # Simple photo rotator (electron.js) 
 
 
+## Requirements
+
+You need to install [ImageMagick](https://imagemagick.org/index.php) to run this app.
+
 
 
 ## Run Locally
